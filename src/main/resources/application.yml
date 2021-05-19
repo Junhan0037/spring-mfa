@@ -1,0 +1,33 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: mfa
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mysql://{mariadbip}:{port}/mfa?characterEncoding=UTF-8&serverTimezone=UTC
+    username: security
+    password: security!
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    mode: HTML
+    suffix: .html
+
+logging:
+  level:
+    root: info
+    com.mfa: debug
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+    org.hibernate.type.descriptor.sql: trace
