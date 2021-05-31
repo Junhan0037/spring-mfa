@@ -14,7 +14,7 @@ import java.io.Serializable;
 @ToString
 @Entity
 @EqualsAndHashCode(callSuper = false)
-@Table(name = "mfa", schema = "security")
+@Table(name = "mfa", schema = "mfa")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class MfaEntity implements Serializable {
 

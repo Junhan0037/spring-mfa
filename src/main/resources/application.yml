@@ -8,15 +8,17 @@ spring:
   jpa:
     show-sql: true
     generate-ddl: false
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate:
         show_sql: true
         format_sql: true
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mysql://{mariadbip}:{port}/mfa?characterEncoding=UTF-8&serverTimezone=UTC
-    username: security
-    password: security!
+    url:
+    username:
+    password:
   thymeleaf:
     cache: false
     encoding: UTF-8

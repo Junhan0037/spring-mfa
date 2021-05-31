@@ -1,9 +1,6 @@
 package com.mfa.datas.entities;
 
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,7 +12,8 @@ import java.io.Serializable;
 @Entity
 @ToString
 @EqualsAndHashCode(callSuper = false)
-@Table(name = "users", schema = "security")
+@Table(name = "users", schema = "mfa")
+@NoArgsConstructor
 public class UserEntity implements Serializable {
 
     @Id
